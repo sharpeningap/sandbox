@@ -1,5 +1,7 @@
 package ru.stqa.pft.sandbox;
 
+import java.awt.*;
+
 public class MyFirstProgram {
 	
 	public static void main(String[] args) {
@@ -8,23 +10,25 @@ public class MyFirstProgram {
 		hello("user");
 		hello("Alex");
 
-		double l = 5;
-		System.out.println("Ploshadi kvadrata so storonoi " + l + " = " + area(l));
+		Square s = new Square();
+		s.l = 5;
+		System.out.println("Ploshadi kvadrata so storonoi " + s.l + " = " + area(s));
 
-		double a = 4;
-		double b = 6;
-		System.out.println("Ploshadi preamougolinika so storonami " + a + " and " + b + " = " + area(a, b));
+		Rectangle r = new Rectangle();
+		r.x = 4;
+		r.y = 6;
+		System.out.println("Ploshadi preamougolinika so storonami " + r.x + " and " + r.y + " = " + area(r));
 	}
 
 	public static void hello(String somebody) {
 		System.out.println("Hello, " + somebody + "!");
 	}
 
-	public static double area(double len) {
-		return len * len;
+	public static double area(Square s) {
+		return s.l * s.l;
 	}
-	public static double area(double a, double b) {
-		return a * b;
+	public static double area(Rectangle r) {
+		return r.x * r.y;
 	}
 
 
